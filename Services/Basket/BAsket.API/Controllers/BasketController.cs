@@ -1,6 +1,6 @@
 ﻿using Asp.Versioning;
 using Basket.Application.Commands;
-//using Basket.Application.GrpcService;
+using Basket.Application.GrpcService;
 using Basket.Application.Mappers;
 using Basket.Application.Queries;
 using Basket.Application.Responses;
@@ -17,6 +17,7 @@ namespace Basket.API.Controllers
     public class BasketController : ApiController
     {
         public readonly IMediator _mediator;
+
         //private readonly IPublishEndpoint _publishEndpoint;
         //private readonly ILogger<BasketController> _logger;
 
