@@ -3,9 +3,8 @@ using Catalog.Application.Handlers;
 using Catalog.Core.Repositories;
 using Catalog.Infrastructure.Data;
 using Catalog.Infrastructure.Repositories;
-//using Common.Logging;
-using DnsClient;
-//using Serilog;
+using Common.Logging;
+using Serilog;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,7 +20,7 @@ builder.Services.AddCors(options =>
 });
 
 //Serilog configuration
-//builder.Host.UseSerilog(Logging.ConfigureLogger);
+builder.Host.UseSerilog(Logging.ConfigureLogger);
 
 builder.Services.AddControllers();
 // Add API Versioning
